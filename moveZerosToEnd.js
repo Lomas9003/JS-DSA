@@ -11,6 +11,8 @@ function moveZerosToEnd(arr){
             }
             count ++
         }
+        console.log(arr);
+        
     }
     return arr
 }
