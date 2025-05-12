@@ -14,7 +14,9 @@ function second(arr){
         }
     }
     return second === -Infinity ? null : second
-}
+} 
+
+
 
 let arr1 = [2,5,3,11,11,10]
 console.log(second(arr1))
