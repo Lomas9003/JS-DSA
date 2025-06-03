@@ -1,22 +1,21 @@
 //  In this we have to find the second largest in array 
 
 function second(arr){
-    if(arr.length < 2) return null;  
 
-    let first = -Infinity
-    let second = -Infinity; 
-    for(let num of arr){
-        if(num > first){
-            second = first; 
-            first = num
-        }else if (num > second && num < first){
-            second = num
+    let firstLargest = -Infinity
+    let secondLargest = -Infinity
+
+    for(let i =0 ; i< arr.length; i++){
+        if(arr[i] > firstLargest){
+            secondLargest = firstLargest
+            firstLargest = arr[i]
+        }else if(arr[i]> secondLargest && arr[i] !== firstLargest){
+            secondLargest = arr[i]
         }
     }
-    return second === -Infinity ? null : second
-} 
+    return secondLargest
 
-
+}
 
 let arr1 = [2,5,3,11,11,10]
 console.log(second(arr1))

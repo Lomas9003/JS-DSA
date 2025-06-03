@@ -38,3 +38,22 @@ return function(){
 
 
 const throthel = data2(getData, 300)
+
+// throtel example 
+
+function throttle(func, delay) {
+  let lastCall = 0;
+  let lastResult;
+
+  return function (...args) {
+    const now = Date.now();
+    console.log(now)
+    if (now - lastCall >= delay) {
+      lastCall = now;
+      lastResult = func.apply(this, args);
+    }
+    return lastResult;
+  };
+}
+
+const throttledFn = throttle(() => console.log('Function called!'), 1000);
