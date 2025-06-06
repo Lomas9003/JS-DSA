@@ -6,3 +6,14 @@ console.log(0.1*3 == 0.3) //false // 0.1 is a float value that represent in bina
 console.log(0.1*4 == 0.4) //true
 console.log(0.1*5 == 0.5) //true
 console.log(0.1*9 == 0.9) //true
+
+let a = false; 
+let b = new Boolean(false)
+
+if(a){
+    console.log("first")
+}
+
+if(b){
+    console.log("secons")
+} // second ->  because second is wrap inside the object and object are trutyh value in js 
