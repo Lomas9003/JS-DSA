@@ -7,7 +7,7 @@ function chunkArray(arr, n) {
 
         for (let j = 0; j < n && (i + j) < arr.length; j++)
         {
-    chunks.push(arr[i+j])
+            chunks.push(arr[i+j])
         }
         result.push(chunks)
     } 
