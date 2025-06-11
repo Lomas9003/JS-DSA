@@ -11,6 +11,26 @@ function countchar(str){
 }
 
 
+// count the occurance of arr below code work for string as well 
+
+function count(arr){
+    let result = {}
+    
+    for(let i =0;i< arr.length; i++){
+        if(!result[arr[i]]){
+            result[arr[i]] = 1
+        }else{
+            result[arr[i]]++
+        }
+    }
+    return result
+}
+
+
+const arr = [1,1,2,3,1,4]
+console.log(count(arr))
+
+
 // console.log(countchar("ISHAN LOMAS")) 
 
 // onther question 
