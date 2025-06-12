@@ -18,6 +18,15 @@ function flatten(arr) {
 const arr = [[1, 2], 4, [5, 6, [7, 8]]];
 console.log(flatten(arr)); // Output: [1, 2, 4, 5, 6, 7, 8]
 
+
+
+
+
+
+
+
+
+
 // flaten the nested array 
 function flattenArray(arr){
     let stack = [...arr]

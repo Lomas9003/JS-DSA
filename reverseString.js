@@ -41,3 +41,44 @@ function reverseString2(str){
 }
 console.log(reverseString2("ISHAN LOMAS"));
 
+
+
+// alternat reverse 
+
+function findReverse (str) {
+    
+  let words = str.split(' ');
+   
+function manualReverse(str){
+     let result = ""; 
+    let word = ""; 
+
+    for(let val of str){ 
+        if(val === " "){
+            result = result + word + " "
+            word =""
+        }else {
+            word = val + word; 
+        }
+    } 
+
+    result = result + word   ;
+    return result 
+}
+ 
+ 
+ let result = words.map((word, index) => {
+    if (index % 2 === 0) {
+      // Reverse even-indexed words manually
+      return manualReverse(word);
+    } else {
+      return word;
+    }
+  });
+   return result.join(" ") 
+
+}
+
+
+console.log(findReverse("Hello Iam Saikrishna Ui Developer"));
+

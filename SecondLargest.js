@@ -20,15 +20,3 @@ function second(arr){
 let arr1 = [2,5,3,11,11,10]
 console.log(second(arr1))
 
-function secondLargest(arr){
-    let val = [...new Set(arr)] 
-    
-    val.sort((a,b)=>b-a)
-    return val[1]
-  
-
-}
-
-
-
-console.log(secondLargest([10, 20, 4, 45, 99]))
