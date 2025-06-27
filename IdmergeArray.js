@@ -22,3 +22,14 @@ function mergeData(arr1, arr2) {
     const merged = Array.from(map.values());
     console.log(merged);
 }
+
+// ifi/p
+const arr1 = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" }
+];
+
+const arr2 = [
+  { id: 1, age: 25 },
+  { id: 3, name: "Charlie", age: 30 }
+];

@@ -104,7 +104,5 @@ function insameFrequency(arr1 , arr2){
 
 
 
-
-
 console.log(insameFrequency([1,2,3] , [1,4,9]))  // true 
 console.log(insameFrequency([1,2,3,5,1] , [25,1,4,9,25])) // false

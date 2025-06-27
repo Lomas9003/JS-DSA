@@ -9,6 +9,17 @@ const val = arr.map((x) => {
 
 // polyphil of map  
 
+Array.prototype.myEach = function(cb){
+    for(let i =0; i<this.length ; i++){
+        cb(this[i] , i)
+    }
+}
+
+
+arr.myEach((val) => {
+    console.log(val)
+})
+
 Array.prototype.myMap = function(cb){
     let val = []
     for(i=0; i<=this.length; i++){

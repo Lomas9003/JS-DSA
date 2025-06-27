@@ -23,3 +23,5 @@ function capitalizeWords(sentence) {
     }
     return result;
 }
+
+console.log(capitalizeWords("my name is ishan"))

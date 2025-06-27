@@ -18,7 +18,7 @@ function merchedArr(arr1, arr2){
         i++
     }
     
-    while(j < arr1.length){
+    while(j < arr2.length){
         result.push(arr2[j])
         j++
     }

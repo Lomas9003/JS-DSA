@@ -21,6 +21,21 @@ function intersection(arr1, arr2){
 const arr1 = [4,9,5], arr2 = [9,4,9,8,4];
 console.log(intersection(arr1, arr2))
 
+function intersection(arr1, arr2) {
+    let result = [];
+
+    for (let i = 0; i < arr1.length; i++) {
+        const val = arr1[i];
+        if (arr2.includes(val) && !result.includes(val)) {
+            result.push(val);
+        }
+    }
+
+    return result;
+}
+
+console.log(intersection([4, 9, 5], [9, 4, 9, 8, 4]));
+
 // how many vovels are there in your name 
 
 function vovels(str){ 

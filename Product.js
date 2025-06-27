@@ -1,13 +1,14 @@
 function productOfNextTwo(arr){
-    let result = []; 
+  let result = []
 
-    for(let i = 0; i< arr.length ; i++){
-        if(i < arr.length - 1){
-            result.push(arr[i + 1] * arr[i + 2])
-        }else{
-            result.push(arr[0] * arr[1] )
-        }
-    }
+  for(let i =0; i<arr.length; i++){
+
+    let next1 = arr[(i + 1) % arr.length]
+    let next2 = arr[(i + 2) % arr.length]
+
+    result.push(next1 * next2)
+  }
+  return result
 }
 
 const inputArray1 = [3, 4, 5];

@@ -28,3 +28,21 @@ console.log(car1.start === car2.start); // true (Shared method from prototype)
 
 car1.start()
 car2.start()  
+
+// Instances like car1 don’t have a prototype property. That belongs to the constructor function (Car).
+// But car1 does have __proto__, which points to Car.prototype, enabling inheritance of shared methods.
+
+// ✅ __proto__ is the internal link (also called [[Prototype]]) that every JavaScript object has, which points to the prototype object it inherits from (usually from a constructor function’s prototype).
+
+// ✅ prototype is a property of functions (specifically constructor functions), used to define shared methods and properties for objects created with new.
+
+
+let counter = 0;
+
+function increaseCounter() {
+  counter++; // modifies external variable
+  return counter;
+}
+
+console.log(increaseCounter()); // 1
+console.log(increaseCounter()); // 2

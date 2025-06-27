@@ -13,6 +13,7 @@ function lengthOfLongestSubstring(s) {
         result.add(s[i])
         maxLength = Math.max(maxLength , (i - left) + 1)
     }
+    //    let val = [...result].join('') if we want to return the string
     return maxLength
 }
 

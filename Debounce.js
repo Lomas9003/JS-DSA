@@ -13,7 +13,7 @@ let timer;
         //it will clear the timer on each function is created on key press 
         clearTimeout(timer)
         timer = setTimeout(() => {
-            getData.apply(context , args)
+            fn.apply(context , args)
         }, d)
     }
 
@@ -24,7 +24,7 @@ const debounce = data(getData , 300)
 
 const data2  = function(fn , d){
     let flag = true; 
-return function(){
+    return function(){
     if(flag){
         getData()
         flag = false; 
