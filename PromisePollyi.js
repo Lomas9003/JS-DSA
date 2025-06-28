@@ -15,3 +15,29 @@ promiseRace(val).then((result) => console.log(result)).catch((err) => console.lo
 // orginal promise.race()
 
 Promise.race(val).then((result) => console.log(result)).catch((err) => console.log(err))
+
+
+
+function customPromiseAll(promises) {
+  return new Promise((resolve, reject) => {
+    const results = [];
+    let completed = 0;
+
+    promises.forEach((promise, index) => {
+      Promise.resolve(promise) // ensures non-promise values work
+        .then(value => {
+          results[index] = value;
+          completed++;
+
+          if (completed === promises.length) {
+            resolve(results);
+          }
+        })
+        .catch(err => reject(err)); // reject immediately if any fails
+    });
+
+    if (promises.length === 0) {
+      resolve([]); // handle empty array case
+    }
+  });
+}

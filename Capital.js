@@ -1,6 +1,6 @@
 function capitalizeWords(sentence) {
     // Your implementation  
-    let val = sentence.trim().split(/\s+/).join(' ')
+    let val = sentence.trim().split(' ').join(' ')
     let result = ""; 
     let capital = true  
 
