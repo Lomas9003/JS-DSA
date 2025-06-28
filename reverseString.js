@@ -82,3 +82,17 @@ function manualReverse(str){
 
 console.log(findReverse("Hello Iam Saikrishna Ui Developer"));
 
+
+
+const sentence = "ChatGPT is awesome";
+const words = sentence.split(" ");
+let reversed = "";
+
+for (let i = words.length - 1; i >= 0; i--) {
+  reversed += words[i];
+  if (i !== 0) {
+    reversed += " ";
+  }
+}
+
+console.log(reversed); // Output: "awesome is ChatGPT"
