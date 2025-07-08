@@ -1,5 +1,21 @@
 // We have to remove the duplicate in array  
 
+// wiout indeof method
+
+function removeDuplicatesWay1(arr){
+    let result = []
+    let map = {} 
+    
+    for(let i =0; i<arr.length; i++){
+        if(!map[arr[i]]){
+            map[arr[i]] = true; 
+            result.push(arr[i])
+        }
+    }
+    return result 
+    
+}
+
 
 function removeDuplicate(arr){
     let result = []; 

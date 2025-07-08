@@ -96,3 +96,33 @@ for (let i = words.length - 1; i >= 0; i--) {
 }
 
 console.log(reversed); // Output: "awesome is ChatGPT"
+
+
+
+/// if only want to reverse the vovel 
+
+var reverseVowels = function(s) {
+    let vowel = new Set("aeiouAEIOU")
+    let char = s.split("")
+    let left = 0; 
+    let right = char.length - 1
+
+    while(left < right){
+
+        while(left < right && !vowel.has(char[left])){
+            left++
+        }
+        while(left < right && !vowel.has(char[right])){
+            right--
+        }
+        [char[left], char[right]] = [char[right] , char[left]]
+        left++ 
+        right--
+
+    }
+    return char.join("")
+};
+
+// Input: s = "IceCreAm"
+
+// Output: "AceCreIm"
