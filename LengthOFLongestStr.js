@@ -9,8 +9,8 @@ function lengthOfLongestSubstring(s) {
            // result.delete(s[i]) /// it will give the longest subString like pwwkew => pwke - 4
             result.delete(s[left]) // it will give contiiues substring like pwwkew => wke - 3
             left++
-        }
-        result.add(s[i])
+        } 
+        result.add(s[i])    
         maxLength = Math.max(maxLength , (i - left) + 1)
     }
     //    let val = [...result].join('') if we want to return the string

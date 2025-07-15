@@ -1,10 +1,10 @@
 
 //function called once only
 
-function add(a , b) {
-    console.log("function called")
-    return a + b;
-}
+    function add(a , b) {
+        console.log("function called")
+        return a + b;
+    }
 
 
 
