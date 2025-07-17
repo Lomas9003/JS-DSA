@@ -8,6 +8,7 @@ function encodingString(str){
             count = count + 1;
         }else {
             result = result + count + str[i] 
+             count = 1
         }
     }
    return result 

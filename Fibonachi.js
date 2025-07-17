@@ -1,16 +1,15 @@
 
+function fibonacci(n) {
+    if (n <= 1) return n;
 
-function fibo(n){
-    let a = 0;
-    let b = 1;
-    let count = 0;
+    let prev = 0;
+    let curr = 1;
 
-    while(count < n){
-        console.log(a)
-        let temp = a + b;
-        a = b;
-        b= temp;
-        count++
+    for (let i = 2; i <= n; i++) {
+        let next = prev + curr;
+        prev = curr;
+        curr = next;
     }
 
+    return curr;
 }

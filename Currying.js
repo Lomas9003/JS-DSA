@@ -4,7 +4,7 @@ function curry(fn){
     
     return function curried(...args){
         if(args.length >= fn.length){
-         return    fn(...args)
+         return  fn(...args)
         }else {
             return function(...newargs){
              return curried(...args  , ...newargs)
