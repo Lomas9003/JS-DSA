@@ -24,4 +24,17 @@ function capitalizeWords(sentence) {
     return result;
 }
 
-console.log(capitalizeWords("my name is ishan"))
+console.log(capitalizeWords("my name is ishan")) 
+
+
+
+
+function capitalizeWords(sentence) {
+    return sentence
+        .trim()
+        .split(" ") // handles multiple spaces too
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .join(' ');
+}
+
+console.log(capitalizeWords("my name is ishan")); 
