@@ -18,7 +18,7 @@ export default function App() {
     if (isNaN(val)) return;
 
     let newVal = val.trim();
-    newVal = newVal.slice(0, 1);
+    newVal = newVal.splice(0, 1);
     let newOTP = [...data];
     newOTP[index] = newVal;
     setdata(newOTP);
@@ -28,7 +28,7 @@ export default function App() {
 
   const handelKeyDown = (e, index) => {
     if (!e.target.value && e.key === "Backspace") {
-      inputRef.current[index - 1]?.focus();
+      inputRef?.current[index - 1]?.focus();
     }
   };
 

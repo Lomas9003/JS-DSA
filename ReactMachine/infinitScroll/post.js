@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 
-export default function Post({ data, setPageNo }) {
+export default function Post({ data, setPageNo }) { 
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (param) => {
