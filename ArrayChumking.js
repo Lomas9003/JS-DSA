@@ -33,7 +33,8 @@ var twoSum = function(nums, target)
     for(let j =0; j<nums.length; j++){
         let pair = target - nums[j]
         if(map[pair] && map[pair] != j){
-            arr.push([nums[j] , pair])
+            arr.push([nums
+                    [j] , pair])
         }
     }
     return arr

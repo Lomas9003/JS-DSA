@@ -22,3 +22,10 @@ const user = [
     {name: "lomas" , age: 25},
     ]
 console.log(groupBy(user, "age"))
+
+
+// o/p 
+// {
+//   '25': [ { name: 'Ishan', age: 25 }, { name: 'lomas', age: 25 } ],
+//   '30': [ { name: 'ravi', age: 30 } ]
+// }
