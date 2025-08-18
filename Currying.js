@@ -1,5 +1,13 @@
 //Currying is a functional programming technique where a function with multiple arguments is transformed into a sequence of functions, each taking a single argument.
 
+// Reusability → Create specialized functions from general ones.
+
+// Avoid repeating arguments when some parameters are fixed.
+
+// Improves code readability in functional programming.
+
+// Works great in partial application.
+
 function curry(fn){
     
     return function curried(...args){

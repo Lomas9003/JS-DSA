@@ -68,6 +68,7 @@ export default function App() {
         >
           ▶
         </button>
+        
       </div>
       <div className="produt-container">
         {data.slice(start, end).map((p) => (
