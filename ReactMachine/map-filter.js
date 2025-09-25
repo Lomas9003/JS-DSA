@@ -20,6 +20,7 @@ let val2 = users.filter((val) => {
 // if onle name age greater then 20
 .map((val) => val.name)
 
+
 // console.log(val2)
 // Output: [{ name: "Bob", age: 25 }]
 

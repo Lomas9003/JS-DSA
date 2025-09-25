@@ -15,3 +15,4 @@ test('async/await', async () => {
   const data = await fetchUser();
   expect(data.name).toBe('Ishan');
 });
+
