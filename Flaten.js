@@ -4,8 +4,7 @@ function flatten(arr) {
 
   for(let i =0; i<arr.length; i++){
     if(Array.isArray(arr[i])){
-      let flat = flatten(arr[i])
-      result.push(...flat)
+      result.push(...flatten(arr[i]))
     }else{
       result.push(arr[i])
     }
