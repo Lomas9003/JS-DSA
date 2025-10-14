@@ -6,17 +6,16 @@ const getData = function(){
 
 const data = function(fn , d){
 let timer;
-    return function(){ 
-        let context = this
-        args = arguments  
+        return function(){ 
+            let context = this
+            args = arguments  
 
-        //it will clear the timer on each function is created on key press 
-        clearTimeout(timer)
-        timer = setTimeout(() => {
-            fn.apply(context , args)
-        }, d)
-    }
-
+            //it will clear the timer on each function is created on key press 
+            clearTimeout(timer)
+            timer = setTimeout(() => {
+                fn.apply(context , args)
+            }, d)
+        }
 }
 
 const debounce = data(getData , 300)
@@ -26,7 +25,7 @@ const data2  = function(fn , d){
     let flag = true; 
     return function(){
     if(flag){
-        getData()
+        fn()
         flag = false; 
         setTimeout(() => {
             flag = true

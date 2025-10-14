@@ -12,7 +12,7 @@ Promise.resolve()
     console.log("Promise 1");
     setTimeout(() => console.log("setTimeout 2"), 0);
   })
-  .then(() => console.log("Promise 2"));
+  .then(() => console.log("Promise 2")); 
 
 console.log("End");
 

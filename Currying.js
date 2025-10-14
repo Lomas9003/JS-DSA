@@ -42,3 +42,18 @@ function sum(a){
 }
 
 console.log(sum(1)(2)(3))
+
+
+function buildURL(baseURL) {
+  return function(endpoint) {
+    return function(query) {
+      return `${baseURL}/${endpoint}?${query}`;
+    };
+  };
+}
+
+const api = buildURL("https://api.example.com");
+
+const userAPI = api("users");
+console.log(userAPI("id=123")); // https://api.example.com/users?id=123
+console.log(userAPI("id=456")); // https://api.example.com/users?id=456
