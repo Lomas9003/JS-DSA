@@ -1,21 +1,23 @@
-function isValid(s) {
-    const stack = [];
-    const map = {
-       '(':')',
-        '{': '}',
-        '[':']',
-    };
-
-    for(let i =0; i<s.length; i++){
-        if(map[s[i]]){
-            stack.push(s[i])
-        }else{
-            let top = stack.pop()
-            if(!top || s[i] != map[top]){
+function isvalid(str){
+    let stack = []
+    
+    let map = {
+        '(' : ')',
+        '[' : ']',
+        '{' : '}',
+    }
+    
+    for(let  i =0; i<str.length; i++){
+        if(str[i] == '(' || str[i] == '[' || str[i] == '{'){
+        stack.push(str[i])
+        }else {
+            let val = stack.pop()
+            if(str[i] !== map[val]){
                 return false
             }
         }
     }
+    return stack.length === 0
+}
 
-    return stack.length === 0;
-} 
+console.log(isvalid("(]"))

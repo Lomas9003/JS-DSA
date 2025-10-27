@@ -9,6 +9,7 @@ export default function App() {
     { name: "Pak", value: "PK", cities: ["Lahore", "Karachi"] },
     { name: "Bangladesh", value: "BG", cities: ["Dhaka", "Chittagong"] },
   ];
+  
 
   const handelChange = (e) => {
     console.log(e.target.value);

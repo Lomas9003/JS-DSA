@@ -16,12 +16,6 @@ function groupBy(arr, key) {
 
 
 
-const user = [
-    {name: "Ishan" , age: 25},
-    {name: "ravi" , age: 30},
-    {name: "lomas" , age: 25},
-    ]
-console.log(groupBy(user, "age"))
 
 
 // o/p 

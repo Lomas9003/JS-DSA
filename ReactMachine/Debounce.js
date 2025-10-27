@@ -19,23 +19,22 @@ export default function App() {
 
 // debpunce file 
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function useDounce(value, delay) {
-  const [debouncedValue, setDebouncedValue] = useState(value || "");
-  const debouncedFxn = useCallback(debounce(setDebouncedValue, delay), [delay]);
-  debouncedFxn(value);
-  return debouncedValue;
-}
+export default function useDebounce(value, delay = 500) {
+  const [debouncedValue, setDebouncedValue] = useState(value);
 
-function debounce(callback, delay) {
-  let timerId;
-  return function debouncedFxn(...args) {
-    if (timerId) {
-      clearTimeout(timerId);
-    }
-    timerId = setTimeout(() => {
-      callback(...args);
+  useEffect(() => {
+    // Start a timer — update debounced value only after 'delay' ms
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
     }, delay);
-  };
+
+    // Cleanup — clear the timer if value changes before 'delay' finishes
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
 }
