@@ -38,4 +38,4 @@ const TrafficLight = () => {
   )
 }
 
-export default TrafficLight
+export default TrafficLight 
