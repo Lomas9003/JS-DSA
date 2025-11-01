@@ -24,3 +24,16 @@ const arr1 = [10, 20, 30];
 const sum = arr.reduce((a, b) => a + b);
 
 console.log(sum); // ?
+
+
+
+const arr5 = [
+{ "fName": "John", "age": 27, "lName": "Reese", "id": 1 },
+{ "fName": "Mike", "age": 21, "lName": "Walter", "id": 2 }
+];
+
+const val = arr.reduce((acc , curr) => {
+    acc[curr.id] = curr
+      return acc;
+}, {})
+console.log(val)
